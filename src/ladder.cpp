@@ -38,7 +38,7 @@ vector<string> generate_word_ladder(const string& begin_word, const string& end_
 
 bool is_adjacent(const string& word1, const string& word2){
     if (word1 == word2){
-        return false;
+        return true;
     }
     int word1_len = word1.length();
     int word2_len = word2.length();
@@ -111,7 +111,7 @@ void load_words(set<string> & word_list, const string& file_name){
 
 void print_word_ladder(const vector<string>& ladder){
     for (auto word : ladder){
-        std::cout << word << std::endl;
+        std::cout << word << " ";
     }
 }
 
