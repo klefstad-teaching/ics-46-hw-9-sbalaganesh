@@ -1,4 +1,4 @@
-#include "../src/ladder.cpp"
+#include "../src/ladder.h"
 int main(){
     verify_word_ladder();
 }
