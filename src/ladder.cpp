@@ -4,7 +4,7 @@ vector<string> generate_word_ladder(const string& begin_word, const string& end_
     if (begin_word == end_word){
         std::cout << "begin and end word same" << std::endl;
         vector <std::string> return_vec;
-        return_vec.push_back(begin_word);
+        //return_vec.push_back(begin_word);
         return return_vec;
     }
     queue<vector<std::string>> ladder_queue;
@@ -110,9 +110,14 @@ void load_words(set<string> & word_list, const string& file_name){
 }
 
 void print_word_ladder(const vector<string>& ladder){
+    if (ladder.size() == 0){
+        std::cout << "No word ladder found." << std::endl;
+        return;
+    }
     for (auto word : ladder){
         std::cout << word << " ";
     }
+    std::cout << std::endl;
 }
 
 void error(string word1, string word2, string msg){
