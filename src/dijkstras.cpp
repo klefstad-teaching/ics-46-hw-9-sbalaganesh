@@ -48,7 +48,9 @@ vector<int> extract_shortest_path(const vector<int>& distances, const vector<int
         return shortest_path;
     }
     for (auto curr = destination; curr != -1; curr = previous[curr]){
-        shortest_path.push_back(curr);
+        if(distances[curr] != 0){
+            shortest_path.push_back(curr);
+        }
     }
     std::reverse(shortest_path.begin(), shortest_path.end());
     return shortest_path;
