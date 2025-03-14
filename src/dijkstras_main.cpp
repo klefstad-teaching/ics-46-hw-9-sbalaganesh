@@ -1,4 +1,4 @@
-#include "../src/dijkstras.h"
+#include "../src/dijkstras.cpp"
 
 int main(){
     Graph g;
